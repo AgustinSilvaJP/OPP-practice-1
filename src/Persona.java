@@ -1,9 +1,9 @@
 public class Persona {
     //atributos (estado/caracteristicas de un objeto);
-    public String name;
-    public String subName;
-    public int age;
-    public boolean isAlive;
+    private String name;
+    private String subName;
+    private int age;
+    private boolean isAlive;
 
     //constructor
     public Persona(String name, String subName, int age, boolean alive){
@@ -19,12 +19,37 @@ public class Persona {
         isAlive = true;
 
     }
-
     //metodos (comportamientos de un objeto)
-    public String getName(){
-        return name + " " + subName;
-    }
 
+    //getters
+    public String getName(){
+        return name.toUpperCase();
+    }
+    public String getSubName(){
+        return subName.toUpperCase();
+    }
+    public String getCompleteName(){
+        return getName() + " " + getSubName();
+    }
+    public int getAge(){
+        return age;
+    }
+    public boolean getAlive(){
+        return isAlive;
+    }
+    //setters
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setSubName(String subName){
+        this.subName = subName;
+    }
+    public void setAge(int age){
+        this.age = age;
+    }
+    public void setAlive(boolean state){
+        isAlive = state;
+    }
     public String saluteTo(String personToSalute){
         if(isAlive) return "Good day " + personToSalute + " how are you?";
         return personToSalute + " is dead... F";
