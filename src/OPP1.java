@@ -5,6 +5,7 @@ public class OPP1 {
         p1.name = "agus";
         p1.subName = "xd";
         p1.age = 23;
+        p1.isAlive = true;
 
         System.out.printf("Person 1 name: %s, subname: %s, age: %d");
     }
