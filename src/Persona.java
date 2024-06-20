@@ -20,6 +20,10 @@ public class Persona {
 
     }
     //metodos (comportamientos de un objeto)
+    public String saluteTo(String personToSalute){
+        if(isAlive) return "Good day " + personToSalute + " how are you?";
+        return personToSalute + " is dead... F";
+    }
 
     //getters
     public String getName(){
@@ -49,9 +53,5 @@ public class Persona {
     }
     public void setAlive(boolean state){
         isAlive = state;
-    }
-    public String saluteTo(String personToSalute){
-        if(isAlive) return "Good day " + personToSalute + " how are you?";
-        return personToSalute + " is dead... F";
     }
 }
